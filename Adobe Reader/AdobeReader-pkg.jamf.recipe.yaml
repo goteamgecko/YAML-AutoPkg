@@ -1,12 +1,12 @@
 Description: Downloads the latest version of Adobe Reader DC and makes a pkg. Then, uploads the package to the Jamf Pro Server and creates a Self Service Policy and Smart Group.
-Identifier: com.teamgecko.pkg.jamf.AdobeReaderDC
+Identifier: com.goteamgecko.pkg.jamf.AdobeReaderDC
 MinimumVersion: "2.3"
 ParentRecipe: com.github.autopkg.pkg.AdobeReaderDC
 
 Input:
   NAME: Adobe Reader DC
   SELF_SERVICE_DESCRIPTION: "%NAME% software for printing and annotating PDF files"
-  CATEGORY: App Updates
+  CATEGORY: Application Updates
   PKG_CATEGORY: "%CATEGORY%"
   GROUP_NAME: "Auto-Update - %NAME%"
   GROUP_TEMPLATE: SmartGroup-update-smart-regex-only-if-installed.xml
@@ -14,7 +14,7 @@ Input:
   EXTENSION_ATTRIBUTE_SCRIPT: ARC-ExtensionAttribute-CFBundleVersion.sh
   VERSION_CRITERION: Application Version
   TESTING_GROUP_NAME: 3PPTesting
-  POLICY_CATEGORY: App Updates
+  POLICY_CATEGORY: Application Updates
   POLICY_TEMPLATE: Policy-install-latest-force.xml
   POLICY_NAME: "%NAME%"
   POLICY_RUN_COMMAND: 'chown -R "$(stat -f%Su /dev/console):staff" "/Applications/%NAME%.app" && echo "Corrected permissions for %NAME%."'
