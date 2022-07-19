@@ -14,7 +14,7 @@ Input:
   EXTENSION_ATTRIBUTE_SCRIPT: ARC-ExtensionAttribute-CFBundleVersion.sh
   VERSION_CRITERION: Application Version
   TESTING_GROUP_NAME: 3PPTesting
-  POLICY_CATEGORY: App Updates
+  POLICY_CATEGORY: Application Updates
   POLICY_TEMPLATE: Policy-install-latest-force.xml
   POLICY_NAME: "%NAME%"
   POLICY_RUN_COMMAND: 'chown -R "$(stat -f%Su /dev/console):staff" "/Applications/%NAME%.app" && echo "Corrected permissions for %NAME%."'
