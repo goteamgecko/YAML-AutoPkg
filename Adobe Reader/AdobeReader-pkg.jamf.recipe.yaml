@@ -6,7 +6,7 @@ ParentRecipe: com.github.autopkg.pkg.AdobeReaderDC
 Input:
   NAME: Adobe Reader DC
   SELF_SERVICE_DESCRIPTION: "%NAME% software for printing and annotating PDF files"
-  CATEGORY: App Updates
+  CATEGORY: Application Updates
   PKG_CATEGORY: "%CATEGORY%"
   GROUP_NAME: "Auto-Update - %NAME%"
   GROUP_TEMPLATE: SmartGroup-update-smart-regex-only-if-installed.xml
